@@ -1,3 +1,4 @@
-$("#btn").click(function(){
-	alert("hi");
+$("#regForm").submit(function(event){
+	event.preventDefault();
+	return false;
 })
