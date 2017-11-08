@@ -17,6 +17,9 @@
     "url": "https://github.com/QuantumT95/DuoHackathon/issues"
   },
   "homepage": "https://github.com/QuantumT95/DuoHackathon#readme",
+  "engines": {
+    "node": "8.9.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
