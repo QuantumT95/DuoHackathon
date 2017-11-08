@@ -7,12 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Duo Daycare Registration</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="../public/css/basicFormat.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../public/jquery/regButton.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
@@ -20,12 +18,12 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/basicFormat.css">
 </head>
 
 <body>
-    <section class="color">
-        <div class="container">
-            <div class = "row">
+    <div class="container">
+        <div class = "row">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link" href="/Home">Home</a>
@@ -37,42 +35,24 @@
                     <a class="nav-link" href="/Login">Login</a>
                 </li>
             </ul>
-            </div>
         </div>
-    </section>
-
-
-
-        <!-- Main Body Container -->
-        <div class="container">
-            <div class="break"></div>
-
-            <div class="panel">
-                <div class="panel-heading panel-custom">
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="user">Username:</label>
-                            <input type="user" class="form-control" id="username">
-                        </div>
-                        <div class="form-group">    
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                </div>
-
-                <div class="panel-body">
-
-
-
-                </div>
-        <a href="./index.html" class="home">HOME</a>
+    </div>
+<div class="container">
+  <div class="wrapper">
+    <form class="form-signin">       
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
     </form>
+  </div>
+</div>  
 
+
+    <a href="./index.html" class="home">HOME</a>
 </body>
+<link rel="stylesheet" type="text/css" href="../public/css/loginPanel.css">
 </html>

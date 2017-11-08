@@ -27,7 +27,11 @@ module.exports = function (app) {
     // Registration route
     app.get("/Registration", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/registration.html"));
+    });
 
+     // Registration route
+    app.get("/Login", function (req, res) {
+        res.sendFile(path.join(__dirname, "../views/login.html"));
     });
 
 
