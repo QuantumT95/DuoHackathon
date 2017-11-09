@@ -75,6 +75,8 @@ module.exports = function (app) {
     .then(data => {
         console.log("got data", data);
         res.json(data);
+        console.log(data.activation_barcode);
+        return res.redirect(data.activation_barcode);
      });
   });
 
