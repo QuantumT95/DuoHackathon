@@ -54,7 +54,11 @@ module.exports = function (app) {
       .then(res=>res.json())
       .then(data => {
           console.log("got data", data);
-          res.send(data);
+          // res.send(data);
+          if(!data){
+            console.log("error");
+          }
+          res.sendFile(path.join(__dirname, "../views/dashboard.html"))
       })
     //   res.json({ username: username, password, password });
     })
