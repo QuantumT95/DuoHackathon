@@ -69,7 +69,7 @@ module.exports = function (app) {
     });
 
     app.post("/enroll", function(req, res) {
-      var input = 'name=' + req.body.username;
+      var input = 'name=' + req.body.name;
       //   console.log('post route');
       var url = 'http://localhost:8080/enroll';
       console.log(input);
