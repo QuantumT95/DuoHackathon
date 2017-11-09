@@ -81,7 +81,6 @@ module.exports = function (app) {
       // var parameters = { method: "post", body: req.body };
 
       fetch(url, parameters)
-      console.log(parameters);
       .then(res => res.json())
       .then(data => {
           console.log("got data", data);
