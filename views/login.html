@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Duo Daycare Registration</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -55,6 +56,21 @@
             <a href="./index.html" class="home">HOME</a>
         </div>
 </div>
+<iframe id="duo_iframe"
+        data-host="host"
+        data-sig-request="sig_request"
+        data-post-action="post_action">
+</iframe>
+<style>
+  #duo_iframe {
+    width: 100%;
+    min-width: 304px;
+    max-width: 620px;
+    height: 330px;
+    border: none;
+  }
+</style>
 </body>
 <link rel="stylesheet" type="text/css" href="../public/css/loginPanel.css">
+<script src="../public/js/Duo-Web-v2.js"></script>
 </html>

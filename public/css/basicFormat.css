@@ -1,5 +1,5 @@
 body{
-	background-color: white;
+	background-color: #ffb300;
 }
 
 .home{
@@ -15,4 +15,8 @@ body{
 
 .home{
 	text-align: right;
+}
+
+#linkBtn{
+	color: white;
 }
