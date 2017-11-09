@@ -42,6 +42,7 @@ module.exports = function (app) {
 
     app.get("/AddChild", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/addchild.html"));
+    });
     app.post("/login", function(req, res) {
       var fetch = require('node-fetch');
       var username = req.body.username;
@@ -61,7 +62,6 @@ module.exports = function (app) {
           res.sendFile(path.join(__dirname, "../views/dashboard.html"))
       })
     //   res.json({ username: username, password, password });
-    })
-    })
+  });
 
-}
+};
