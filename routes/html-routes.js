@@ -42,6 +42,8 @@ module.exports = function (app) {
 
     app.get("/AddChild", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/addchild.html"));
+    })
+    
     app.post("/login", function(req, res) {
       var fetch = require('node-fetch');
       var username = req.body.username;
@@ -54,14 +56,13 @@ module.exports = function (app) {
       .then(res=>res.json())
       .then(data => {
           console.log("got data", data);
-          // res.send(data);
-          if(!data){
+          res.send(data);
+          if(data==false){
             console.log("error");
           }
           res.sendFile(path.join(__dirname, "../views/dashboard.html"))
       })
     //   res.json({ username: username, password, password });
-    })
     })
 
 }
