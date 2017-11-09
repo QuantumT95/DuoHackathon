@@ -43,6 +43,7 @@ module.exports = function (app) {
     app.get("/AddChild", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/addchild.html"));
     app.post("/login", function(req, res) {
+      var fetch = require('node-fetch');
       var username = req.body.username;
       var password = req.body.password;
     //   console.log("post route");
