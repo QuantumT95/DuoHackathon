@@ -7,6 +7,7 @@
 
 
 var path = require("path");
+var fetch = require('node-fetch');
 
 // ROUTES
 // =============================================================
@@ -43,8 +44,8 @@ module.exports = function (app) {
     app.get("/AddChild", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/addchild.html"));
     });
+
     app.post("/login", function(req, res) {
-      var fetch = require('node-fetch');
       var username = req.body.username;
       var password = req.body.password;
     //   console.log("post route");
@@ -62,6 +63,18 @@ module.exports = function (app) {
           res.sendFile(path.join(__dirname, "../views/dashboard.html"))
       })
     //   res.json({ username: username, password, password });
+  });
+
+  app.post("/enroll", function(req, res) {
+    var url = "http://localhost:8080/enroll";
+    var parameters = { method: "post", body: req.body };
+
+    fetch(url, parameters)
+    .then(res => res.json())
+    .then(data => {
+        console.log("got data", data);
+        res.json(data);
+     });
   });
 
 };
