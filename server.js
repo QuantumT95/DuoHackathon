@@ -13,6 +13,16 @@ var session = require("express-session");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// SET UP MONGOOSE
+// =============================================================
+var mongoose = require("mongoose");
+mongoose.connect("mongod://localhost/test", function(err){
+	if(err){
+		return console.log(err);
+	}
+	return console.log("Successfully connected to MongoDB!");
+})
+
 // Requiring our models for syncing
 // var db = require("./models");
 
@@ -25,6 +35,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
+app.use(session({secret:"lkjhgfdsasdfghjkloikjhgfdsa", resave: false, saveUninitialized: true}))
 
 // STATIC DIRECTORY TO BE SERVED
 app.use(express.static("public"));
