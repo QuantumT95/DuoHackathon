@@ -55,8 +55,8 @@ module.exports = function (app) {
           console.log("got data", data);
           res.send(data);
       })
-
     //   res.json({ username: username, password, password });
+    })
+    })
 
-
-};
+}
