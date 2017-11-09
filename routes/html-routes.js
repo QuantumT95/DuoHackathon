@@ -84,7 +84,7 @@ module.exports = function (app) {
       .then(res => res.json())
       .then(data => {
           console.log("got data", data);
-          res.json(data);
+          // res.json(data);
           console.log(data.activation_barcode);
           return res.render('enroll', { activation_barcode: data.activation_barcode });
        });
