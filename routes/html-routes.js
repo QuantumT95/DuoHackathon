@@ -60,7 +60,7 @@ module.exports = function (app) {
       .then(res=>res.json())
       .then(data => {
           console.log("got data", data);
-          res.send(data);
+          // res.send(data);
           if(data==false){
             console.log("error");
           }
