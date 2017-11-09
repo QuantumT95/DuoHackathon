@@ -15,13 +15,13 @@ var PORT = process.env.PORT || 8080;
 
 // SET UP MONGOOSE
 // =============================================================
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/test", function(err){
-	if(err){
-		return console.log(err);
-	}
-	return console.log("Successfully connected to MongoDB!");
-})
+// var mongoose = require("mongoose");
+// mongoose.connect("mongodb://localhost/test", function(err){
+// 	if(err){
+// 		return console.log(err);
+// 	}
+// 	return console.log("Successfully connected to MongoDB!");
+// })
 
 // Requiring our models for syncing
 // var db = require("./models");
@@ -40,6 +40,8 @@ app.use(session({secret:"lkjhgfdsasdfghjkloikjhgfdsa", resave: false, saveUninit
 // STATIC DIRECTORY TO BE SERVED
 app.use(express.static("public"));
 app.use(express.static("views"));
+app.use(express.json());
+app.use(express.urlencoded());
 
 // ROUTES
 // =============================================================
