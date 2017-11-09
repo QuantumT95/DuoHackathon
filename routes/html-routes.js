@@ -34,5 +34,23 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../views/login.html"));
     });
 
+    app.post("/login", function(req, res) {
+      var username = req.body.username;
+      var password = req.body.password;
+    //   console.log("post route");
+    var url = "http://localhost:8080/login";
+    var parameters = {method: "post",
+        body: req.body}
+      fetch(url, parameters)
+      .then(res=>res.json())
+      .then(data => {
+          console.log("got data", data);
+          res.send(data);
+      })
+
+    //   res.json({ username: username, password, password });
+
+    });
+
 
 };

@@ -8,7 +8,7 @@
     <title>Duo Daycare Registration</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/basicFormat.css">
@@ -32,32 +32,33 @@
     </section>
     <!-- Main Body Container -->
     <div class="container">
-        <form id = "regForm">
-            <div class="form-group">
+        <form id="regForm" action="http://localhost:8080/enroll" method="post">
+            <!-- <div class="form-group">
                 <label for="email">Email address:</label>
                 <input type="email" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="user">Username:</label>
-                    <input type="user" class="form-control" id="username">
-                </div>
-                <div class="form-group">    
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd">
-                </div>
-                <button type="submit" class="btn btn-default submit-btn" id="submit">Submit</button>
-            </form>
-        </div>
+            </div> -->
+            <div class="form-group">
+                <label for="user">Username:</label>
+                <input type="user" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+            <button type="submit" class="btn btn-default submit-btn" id="submit">Submit</button>
+        </form>
+    </div>
     </form>
     <div class="footer">
         <div class="container">
             <a href="./index.html" class="home">HOME</a>
         </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>    
-    <script type="text/javascript" src="./jquery/regButton.js"></script>
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!-- <script type="text/javascript" src="./jquery/regButton.js"></script> -->
 </body>
+
 </html>
