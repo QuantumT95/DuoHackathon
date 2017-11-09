@@ -53,7 +53,7 @@ module.exports = function (app) {
       console.log(input);
       var parameters = {
         method: 'post',
-        headers:{content-type: 'application/x-www-form-urlencoded'},
+        headers:{'content-type': 'application/x-www-form-urlencoded'},
         body: input
       }
       fetch(url, parameters)
@@ -75,7 +75,7 @@ module.exports = function (app) {
       console.log(input);
       var parameters = {
         method: 'post',
-        headers:{content-type: 'application/x-www-form-urlencoded'},
+        headers:{'content-type': 'application/x-www-form-urlencoded'},
         body: input
       }
       // var parameters = { method: "post", body: req.body };
