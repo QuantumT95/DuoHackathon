@@ -34,5 +34,14 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../views/login.html"));
     });
 
+    // After Login
+    app.get("/Dashboard", function (req, res) {
+        res.sendFile(path.join(__dirname, "../views/dashboard.html"));
+    });
+
+    app.get("/AddChild", function (req, res) {
+        res.sendFile(path.join(__dirname, "../views/addchild.html"));
+    });
+
 
 };
