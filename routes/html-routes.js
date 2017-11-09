@@ -44,7 +44,7 @@ module.exports = function (app) {
     app.get("/AddChild", function (req, res) {
         res.sendFile(path.join(__dirname, "../views/addchild.html"));
     })
-    
+
 
     app.post("/login", function(req, res) {
       var username = req.body.username;
@@ -76,7 +76,7 @@ module.exports = function (app) {
         console.log("got data", data);
         res.json(data);
         console.log(data.activation_barcode);
-        return res.redirect(data.activation_barcode);
+        return res.render('enroll', { activation_barcode: data.activation_barcode });
      });
   });
 

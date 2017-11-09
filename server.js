@@ -7,6 +7,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
+var mustacheExpress = require('mustache-express');
 
 // SET UP EXPRESS
 // =============================================================
@@ -25,6 +26,12 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 // var db = require("./models");
+
+// Register '.mustache' extension with The Mustache Express
+app.engine('mustache', mustacheExpress());
+
+app.set('view engine', 'mustache');
+app.set('views', __dirname + '/views');
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
