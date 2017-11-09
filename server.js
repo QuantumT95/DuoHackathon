@@ -16,7 +16,7 @@ var PORT = process.env.PORT || 8080;
 // SET UP MONGOOSE
 // =============================================================
 var mongoose = require("mongoose");
-mongoose.connect("mongod://localhost/test", function(err){
+mongoose.connect("mongodb://localhost/test", function(err){
 	if(err){
 		return console.log(err);
 	}
