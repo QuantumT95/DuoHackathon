@@ -35,6 +35,7 @@ module.exports = function (app) {
     });
 
     app.post("/login", function(req, res) {
+      var fetch = require('node-fetch');
       var username = req.body.username;
       var password = req.body.password;
     //   console.log("post route");
